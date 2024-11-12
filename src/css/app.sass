@@ -1,0 +1,114 @@
+
+::selection
+  background-color: rgba($primary, 0.1)
+  color: $b-primary
+
+::-moz-selection
+  background: rgba($primary, 0.1)
+  color: $b-primary
+
+::-webkit-selection
+  background: rgba($primary, 0.1)
+  color: $b-primary
+
+::-webkit-scrollbar
+  width: 6px
+  height: 8px
+
+::-webkit-scrollbar-track
+  background: $track-color
+  border-radius: 8px
+
+::-webkit-scrollbar-thumb
+  background: $thumb-color
+  border-radius: 8px
+
+::-webkit-scrollbar-thumb:hover
+  background: $hover-color
+
+// 应用样式
+// .q-splitter__separator:hover > .q-splitter__separator-area
+//   // background-color: rgba($b-accent, 0.8)
+//   background-color: $b-accent
+
+// .q-splitter__separator-area.q-splitter--horizontal
+//   height: 7px
+
+// .q-splitter__separator-area.q-splitter--vertical
+//   width: 7px
+
+.q-splitter--vertical > .q-splitter__separator > div
+  left: 0
+
+body.body--dark .q-header,
+body.body--dark .q-footer,
+body.body--dark .q-drawer
+  border-width: 2px
+  border-color: #41455a
+
+body div
+  color: $primary-text
+
+@mixin baseMarkerStyle
+  letter-spacing: 2px
+  font-weight: 600
+
+body
+  strong
+    color: $b-primary
+    @include baseMarkerStyle
+  em
+    font-style: normal
+    color: $b-secondary
+    @include baseMarkerStyle
+  s
+    text-decoration: none
+    color: $b-info
+    @include baseMarkerStyle
+
+.ys-bg-primary,
+.q-menu--dark
+  background-color: rgba($dark-page, 0.75)
+  backdrop-filter: blur(18px)
+
+.q-menu
+  border-radius: 3px
+  // border: 1px solid #51576d
+  box-shadow: #0000004d 2px 2px 10px
+
+.q-list--dark,
+.q-item--dark
+  backdrop-filter: blur(18px)
+  background-color: rgba($dark-page, 0.6)
+
+.q-separator--dark
+  background-color: (#41455a)
+  margin: 2px
+  margin-left: 4px
+  margin-right: 4px
+
+.q-list.q-list--dense
+  min-width: 80px !important
+  padding: 5px
+  padding-bottom: 4px
+  padding-top: 4px
+
+.q-list--dark .q-item__section--side:not(.q-item__section--avatar),
+.q-item--dark .q-item__section--side:not(.q-item__section--avatar)
+  color: #aab3d5
+
+.q-list--dense > .q-item,
+.q-item--dense
+  font-size: 13px
+  min-height: 14px
+  padding: 2px 6px
+  letter-spacing: 1.25px
+
+.q-tabs--vertical.q-tabs--not-scrollable .q-tabs__content
+  align-content: center
+
+.on-left
+  margin-right: 6px
+
+html, body
+  user-select: none

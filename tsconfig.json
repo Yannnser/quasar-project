@@ -1,9 +1,16 @@
 {
   "extends": "@quasar/app-vite/tsconfig-preset",
   "compilerOptions": {
-    "baseUrl": "."
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "strict": false,
+    // "resolveJsonModule": false,
+    // "esModuleInterop": true
+    // "skipLibCheck": true,
+
   },
-  "exclude": [
+
+  "exclude": [ // 明确排除不需要的文件或目录
     "./dist",
     "./.quasar",
     "./node_modules",
@@ -11,4 +18,5 @@
     "./src-cordova",
     "./quasar.config.*.temporary.compiled*"
   ]
+
 }
